@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pyyaml = "*"
+pyyaml = ">=4.2b1"
 
 [packages]
 sphinx = "*"
