@@ -1,0 +1,13 @@
+---
+
+#######################################
+### Constants used in documentation ###
+#######################################
+
+version: '1.0.0'
+
+project: 'invoke-sphinx'
+copyright: '2018, Smile'
+author: 'Smile'
+
+
