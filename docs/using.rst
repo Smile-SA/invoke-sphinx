@@ -9,12 +9,19 @@ First, you need to comply with the :ref:`requirements-to-use`.
 Install |project_name| itself
 =============================
 
-To install |project_name| itself, you can simply use `pip` or, preferably, use `pipenv` with the following command:
+To install |project_name| itself, you can simply use `pip` or, preferably, use `pipenv`.
+
+If you choose `pipenv` as your recommended installation tool, you might need to install it first using
+
+.. code-block:: shell
+
+   $ pip install --user -U pipenv 
+
+Then , simply use the following command:
 
 .. code-block:: shell
 
    $ pipenv install invoke-sphinx
-
 
 Integrate |project_name| in your project
 ========================================
