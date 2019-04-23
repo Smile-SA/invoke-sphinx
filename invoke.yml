@@ -4,10 +4,10 @@
 ### Constants used in documentation ###
 #######################################
 
-version: '1.0.0'
+version: '1.0.1'
 
 project: 'invoke-sphinx'
-copyright: '2018, Smile'
+copyright: '2019, Smile'
 author: 'Smile'
 
 

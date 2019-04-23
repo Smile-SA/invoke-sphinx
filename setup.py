@@ -1,7 +1,7 @@
 import setuptools
 
 NAME = "invoke-sphinx"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 REQUIRES = ['sphinx', 'sphinx_rtd_theme', 'sphinx-autobuild', 'sphinx-versions', 'invoke', 'pyyaml']
 
 with open("README.rst", "r") as fh:
