@@ -6,10 +6,10 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-sphinx = "*"
+sphinx = "==1.8.5"
 sphinx_rtd_theme = "*"
 sphinx-autobuild = "*"
-sphinx-versions = "*"
+sphinx-versions = ">=1.0.1"
 invoke = "*"
 typing = {version = "*", markers="python_version >= '3.0' and python_version < '3.5'"}
 pyyaml = ">=3.13"
