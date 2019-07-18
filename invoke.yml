@@ -4,7 +4,7 @@
 ### Constants used in documentation ###
 #######################################
 
-version: '1.1.0'
+version: '1.1.1'
 
 project: 'invoke-sphinx'
 copyright: '2019, Smile'
