@@ -116,13 +116,23 @@ def doc_generate(c, docs_directory=default_docs_directory, open_=False):
 
 ns.add_task(doc_generate, 'build')
 
-@task(pre=[doc_clean], help={'docs-directory': help_docs_directory, 'open': 'Flag to open the local doc once built'})
-def doc_generate_versions(c, docs_directory=default_docs_directory, open_=False):
+@task(
+  pre=[doc_clean],
+  help={
+    'docs-directory': help_docs_directory,
+    'pdf': 'Flag to also generate PDF versions (True by default)',
+    'open': 'Flag to open the local doc once built (False by default)'
+  }
+)
+def doc_generate_versions(c, docs_directory=default_docs_directory, pdf=True, open_=False):
     """
     Build locally the documentation, for all versions
     """
     print("\n\n##### Building local documentation, for all versions #####\n")
-    c.run("sphinx-versioning build {} {}".format(docs_directory, doc_build_directory(docs_directory)))
+    pdf_option=""
+    if pdf:
+        pdf_option=" -P {}.pdf".format(c.project)
+    c.run("sphinx-versioning build{} {} {}".format(pdf_option, docs_directory, doc_build_directory(docs_directory)))
     if open_:
         doc_open(c, docs_directory, True)
 
