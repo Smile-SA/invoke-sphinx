@@ -186,11 +186,19 @@ def doc_publish(c, docs_directory=default_docs_directory, open_=False):
 
 ns.add_task(doc_publish, 'publish')
 
-@task(pre=[doc_generate_versions], help={'docs-directory': help_docs_directory, 'open': 'Flag to open the local doc once built'})
-def doc_publish_versions(c, docs_directory=default_docs_directory, open_=False):
+@task(
+    help={
+        'docs-directory': help_docs_directory,
+        'pdf': 'Flag to also generate PDF versions (True by default)',
+        'open': 'Flag to open the local doc once built'
+    }
+)
+def doc_publish_versions(c, docs_directory=default_docs_directory, pdf=True, open_=False):
     """
     Publish the documentation on documentation server, for all versions
     """
+    doc_generate_versions(c, docs_directory, pdf, open_)
+
     print("\n\n##### Publishing documentation, for all versions #####\n")
     run_rsync_doc(c, docs_directory)
     if open_:
